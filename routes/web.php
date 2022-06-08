@@ -19,19 +19,20 @@ use App\Http\Controllers\ContactController;
 */
 
 
+//home route
+Route::get('/', 'HomeController@index')->name('home');
 
-
-Route::get('/', 'BlogController@blog')->name('home');
+//blog route
 Route::get('/blog', 'BlogController@blog')->name('blog');
 Route::get('/about', 'AboutController@about')->name('about');
 Route::get('/contact', 'ContactController@contact')->name('contact');
 
 
-
-    Route::get('posts', 'PostController@index')->name('posts')->middleware('auth');
-    Route::get('users', 'UserController@index')->name('users')->middleware('auth');
-    Route::get('categories', 'CategorieController@index')->name('categories')->middleware('auth');
-    Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
+//admin side route
+Route::get('posts', 'PostController@index')->name('posts')->middleware('auth');
+Route::get('users', 'UserController@index')->name('users')->middleware('auth');
+Route::get('categories', 'CategorieController@index')->name('categories')->middleware('auth');
+Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
 
        
     
@@ -40,8 +41,8 @@ Route::get('/contact', 'ContactController@contact')->name('contact');
 //      return view('welcome');
 //  });
 
-Route::get('/dashboard', function () {
-return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
+// Route::get('/dashboard', function () {
+// return view('dashboard');
+// })->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
