@@ -1,0 +1,1 @@
+<h1>this is the admin dashborad index page</h1>
