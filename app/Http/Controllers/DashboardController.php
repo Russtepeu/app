@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,11 +15,9 @@ class DashboardController extends Controller
      */
     public function index()
     {
-    //    $posts = Post::all();
-    //    $blogs = Blog::all();
-    //    $users = User::all();
-    //    return view('pages.admin.dashboard.index');
-    return  view('pages.dashboard');
+       $posts = Post::all();
+       $users = User::all();
+       return view('pages.admin.dashboard.index');
     }
 
     /**

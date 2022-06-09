@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <x-partials.head />
-</head>
+<x-partials.head />
 
 <body>
     <x-partials.nav />
+
 
     @foreach ($posts as $post)
     <div class="max-w-4xl px-10 my-4 py-6 bg bg-gray-200 rounded-xl shadow-3xl">
         <div class="flex justify-between items-center">
             <span class="font-bold text-gray-700">{{ $post->created_at->format('d/m/Y') }}</span>
-            <span class="px-2 py-1 bg-green-800 text-white font-bold rounded">
+            <span class="px-2 py-1 bg-green-800 text-blackfont-light rounded">
                 {{ $post->categorie->name}}</span>
         </div>
         <div class="mt-4">
@@ -36,10 +35,8 @@
     @endforeach
     @endforeach
 
-    <footer>
+    <x-partials.footer />
 
-        <x-partials.footer />
-    </footer>
 
 </body>
 

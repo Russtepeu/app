@@ -9,9 +9,4 @@ class Subscriber extends Model
 {
     use HasFactory;
 
-    protected $table = 'susbcribers';
-
-    protected $fillable = ['name', 'email', 'token'];
-
-
 }

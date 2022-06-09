@@ -9,22 +9,6 @@ class Post extends Model
 {
     use HasFactory;
 
-
-    protected $table = 'posts';
-
-    protected $fillable = [
-        'cover_image',
-        'title',
-        'slug',
-        'body',
-        'meta_description',
-        'published_at',
-        'featured',
-        'user_id',
-        'categorie_id'
-    ];
-
-    
     public function user()
     {
         return$this->belongsTo('\App\Models\User');

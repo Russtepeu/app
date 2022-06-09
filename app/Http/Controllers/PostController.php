@@ -26,7 +26,7 @@ class PostController extends Controller
     {
         $categories =  Categorie::all();
         $users = User::all();
-        return view('pages.admin.dashboard.posts.create', ['categories' => $categories, 'users'=>$users]);
+        return view('pages.admin.dashboard.posts.create', ['categories' => $categories, 'users' => $users]);
     }
 
     /**

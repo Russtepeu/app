@@ -29,20 +29,18 @@ Route::get('/contact', 'ContactController@contact')->name('contact');
 
 
 //admin side route
-Route::get('posts', 'PostController@index')->name('posts')->middleware('auth');
-Route::get('users', 'UserController@index')->name('users')->middleware('auth');
-Route::get('categories', 'CategorieController@index')->name('categories')->middleware('auth');
-Route::get('dashboard', 'DashboardController@index')->name('dashboard')->middleware('auth');
+Route::resource('posts', 'PostController')->middleware('auth');;
+Route::resource('users', 'UserController')->middleware('auth');
+Route::resource('categories', 'CategorieController')->middleware('auth');
+Route::resource('dashboard', 'DashboardController')->middleware('auth');
 
-       
-    
 
 // Route::get('/', function () {
 //      return view('welcome');
 //  });
 
-// Route::get('/dashboard', function () {
-// return view('dashboard');
-// })->middleware(['auth'])->name('dashboard');
+ //Route::get('/dashboard', function () {
+ //return view('dashboard');
+//})->middleware(['auth'])->name('dashboard');
 
-// require __DIR__.'/auth.php';
+require __DIR__.'/auth.php';

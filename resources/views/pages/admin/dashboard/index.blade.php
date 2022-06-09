@@ -1,1 +1,8 @@
-<h1>this is the admin dashborad index page</h1>
+@extends('pages.admin.layouts.app')
+
+
+@section('content')
+
+hi this is the admin main stat page
+
+@endsection
