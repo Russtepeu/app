@@ -1,5 +1,5 @@
 <footer>
     <div>
-        <h3>copyright russel tepeu</h3>
+        <h6>copyright russel tepeu</h3>
     </div>
 </footer>

@@ -28,4 +28,8 @@ class Post extends Model
     {
         return$this->belongsTo('\App\Models\Tag');
     }
+    public function image()
+    {
+        return$this->HasOne('\App\Models\Image');
+    }
 }

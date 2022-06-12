@@ -23,9 +23,10 @@ use App\Http\Controllers\ContactController;
 Route::get('/', 'HomeController@index')->name('home');
 
 //blog route
-Route::get('/blog', 'BlogController@blog')->name('blog');
+Route::get('/blog', 'BlogController@index')->name('blog');
 Route::get('/about', 'AboutController@about')->name('about');
 Route::get('/contact', 'ContactController@contact')->name('contact');
+Route::get('/search', 'PostController@search')->name('search');
 
 
 //admin side route
@@ -33,6 +34,7 @@ Route::resource('posts', 'PostController')->middleware('auth');;
 Route::resource('users', 'UserController')->middleware('auth');
 Route::resource('categories', 'CategorieController')->middleware('auth');
 Route::resource('dashboard', 'DashboardController')->middleware('auth');
+Route::resource('blog', 'BlogController');
 
 
 // Route::get('/', function () {

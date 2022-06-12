@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    line-height: 1.5;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #6c757d;
+    text-align: left;
+    background-color: #ffffff;
+}
+
+
+.about-img {
+    margin-left: -100px;
+    right: -60px;
+}
+
+.btn {
+    padding: 10px 25px;
+    border-radius: 100px;
+}
+
+.btn-white {
+    background-color: #ffffff;
+    border: 2px solid #e97979;
+}
+
+.btn-blue {
+    border: 2.4px solid #e97979;
+    color: #ffffff;
+}
+
+.hero-text {
+    margin-top: 150px;
+}
+
+.typed-cursor {
+    font-size: 45px;
+    color: #ffffff;
+}
+
+.position-absolute {
+    font-weight: 700;
+}
+
+/* navigation menu */
+
+a {
+    color: #DE3163;
+    text-decoration: none;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a:hover {
+    color: #DE3163;
+    text-decoration: underline;
+}
+
+.navbar-light {
+    display: none;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 25px 10px;
+    color: #343a40;
+    outline: none;
+    font-weight: 500;
+}
+
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link.active {
+    color: turquoise;
+}
+
+
+/* about */
+
+
+
+
+
+.progress .progree-bar {
+    width: 0px;
+    border-radius: 10px;
+    transition: 2s;
+}
+
+.position-absolute {
+    font-weight: 700;
+}
+
+.ex-me {
+    margin-top: 35px;
+}
+
+/* services */
+
+.service-h4 {
+    padding-bottom: 30px;
+}
+
+
+.service-icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60px;
+}
+
+.service-box {
+    box-shadow: 0px 1px 7px rgba(0, 0, 0, 0.1);
+    margin-left: 50px;
+    padding: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.service-box:hover {
+    box-shadow: 0px 1px 13px rgba(27, 27, 27, 0.705);
+}
+
+
+
+
+
+
+.h1,
+.h2,
+.h3,
+.h4 {
+    display: block;
+    color: var(--foreground-primary);
+}
+
+.h1 {
+    font-size: var(--fs-1);
+    font-weight: 900;
+}
+
+.h2 {
+    font-size: var(--fs-2);
+    font-weight: 700;
+}
+
+.h3 {
+    font-size: var(--fs-3);
+    font-weight: 700;
+}
+
+.h4 {
+    font-size: var(--fs-4);
+    font-weight: 700;
+}

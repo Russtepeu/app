@@ -1,4 +1,3 @@
-{{--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,9 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
     <title>Admin - @yield('title')</title>
-    @bukStyles(true)
-    @bukScripts(true)
-</head>
 
 <body class="bg-gray-50 text-sm">
 
@@ -21,67 +17,43 @@
         <div class="max-w-5xl bg-white rounded-lg xl:shadow-xl mx-auto p-8 mt-8">
 
             <header class="mb-8 flex space-x-2 items-center justify-between">
-                <div class="flex space-x-2 items-center">
-                    <x-logo class="text-4xl border-r pr-2 mr-2" /> @yield('title')
-                </div>
-
-                <div>
-                    @yield('action')
-                </div>
+                <h1>leruss</h1>
             </header>
 
             <div class="flex border-t">
                 <aside class="w-1/6 pt-8">
                     <ul class="space-y-4">
                         <li>
-                            <a href="{{ route('posts.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="clipboard-outline"></ion-icon>
+                            <a href="{{ route('dashboard.index') }}" class="flex items-center space-x-1">
+                                <ion-icon name="book-outline"></ion-icon>
 
-                                <span class="pt-1"> posts </span>
+                                <span class="pt-1"> Home </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{{ route('posts.index') }}" class="flex items-center space-x-1">
+                                <ion-icon name="book-outline"></ion-icon>
+
+                                <span class="pt-1"> Posts </span>
                             </a>
                         </li>
                         <li>
                             <a href="{{ route('users.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="people-outline"></ion-icon>
 
+                                <ion-icon name="person-outline"></ion-icon>
                                 <span>
-                                    users
+                                    Users
                                 </span>
                             </a>
                         </li>
-                        <li>
-                            <a href="{{ route('courses.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="book-outline"></ion-icon>
 
-                                <span>courses </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('assignments.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="bookmark-outline"></ion-icon>
 
-                                <span>assignments
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('systems.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="bookmark-outline"></ion-icon>
 
-                                <span>systems </span>
 
-                            </a>
-                        </li>
-                        <li>
-                            <a href="{{ route('levels.index') }}" class="flex items-center space-x-1">
-                                <ion-icon name="business-outline"></ion-icon>
-                                <span>levels </span>
-                            </a>
-                        </li>
                         <li>
                             <a href="{{ route('categories.index') }}" class="flex items-center space-x-1">
                                 <ion-icon name="business-outline"></ion-icon>
-                                <span>categories </span>
+                                <span>Categories </span>
                             </a>
                         </li>
                         <li>
@@ -107,12 +79,14 @@
             </div>
         </div>
     </div>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
-</html> --}}
+</html>
 
 
+{{--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -128,7 +102,7 @@
 
 </head>
 
-<body class="bg-gray-50 text-sm">
+<body class="bg-white text-sm">
 
     <div>
         <div class="max-w-5xl bg-white rounded-lg xl:shadow-xl mx-auto p-8 mt-8">
@@ -141,7 +115,7 @@
             </header>
 
             <div class="flex border-t">
-                <aside class="w-1/6 pt-8">
+                <aside class="w-1/6 pt-4">
                     <ul class="space-y-4">
                         <li>
                             <a href="{{ route('posts.index') }}" class="flex items-center space-x-1">
@@ -194,4 +168,4 @@
 
 </body>
 
-</html>
+</html> --}}

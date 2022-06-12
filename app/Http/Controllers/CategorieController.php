@@ -42,12 +42,11 @@ class CategorieController extends Controller
 
 
 
-            $category = new Categorie;
+            $categorie = new Categorie;
+            $categorie->name = $request->name;
 
-            $category->name = $request->name;
 
-
-            $category->save();
+            $categorie->save();
 
             return redirect()->route('categories.index');
         }

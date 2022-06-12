@@ -5,27 +5,33 @@
 
 @section('content')
 
-<form method="POST" class="space-y-3" action="{{  route('posts.store') }}">
+<form method="POST" class="space-y-3" action="{{  route('posts.store') }}" enctype="multipart/form-data">
     @csrf
     <div>
-        <x-jet-input required name='title' placeholder="Title" type="text" class="border p-3" />
+        <input required name='title' placeholder="Post title" type="text" class="border rounded  p-3" />
     </div>
     <div class="mb-4">
-        <label class="block text-grey-darker text-sm font-bold mb-2" for="category_id">
-            category
+        <label class="block text-grey-darker text-sm font-bold mb-2" for="categorie_id">
+            categorie
         </label>
-        <select value="{{ old('category_id') }}" name="category_id" id="inputGroupSelect1"
+        <select value="{{ old('categorie_id') }}" name="categorie_id" id="inputGroupSelect1"
             class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker">
-            <option selected disabled> select category</option> value="{{ old('category_id') }}
-            @foreach ($categories as $category)
-            <option value="{{ $category->id }}">{{ $category->name }}</option>
+            <option selected disabled> select categorie</option> value="{{ old('categorie_id') }}
+            @foreach ($categories as $categorie)
+            <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
             @endforeach
         </select>
     </div>
-    <input name="body" id="body" value="{{  old('body') }}" type="hidden">
-    <trix-editor input="body" class="trix-content"></trix-editor>
+    <label for="">Upload Image</label>
+    <input type="file" name="cover_image" id="cover_image">
     <div>
-        <x-jet-button class="border rounded-full px-2 py-1" type="submit">Save</x-jet-button>
+
+        <input type="text" placeholder="post content" name="body" id="body" value="{{  old('body') }}">
+
+    </div>
+
+    <div>
+        <button class="border rounded-full px-2 py-1" type="submit">Save</button>
     </div>
 </form>
 

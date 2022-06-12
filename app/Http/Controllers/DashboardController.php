@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Comment;
+use App\Models\Categorie;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -15,9 +17,11 @@ class DashboardController extends Controller
      */
     public function index()
     {
-       $posts = Post::all();
-       $users = User::all();
-       return view('pages.admin.dashboard.index');
+       $posts = Post::count();
+       $users = User::count();
+       $categories = Categorie::count();
+       $comments = Comment::count();
+       return view('pages.admin.dashboard.index', ['categories' => $categories, 'users' => $users, 'posts' =>$posts, 'comments' => $comments]);
     }
 
     /**

@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
+use App\Models\Comment;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -12,9 +14,11 @@ class BlogController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-  public function blog(request $request)
+  public function index(post $post)
   {
-      $posts = Post::all();
-      return view('pages.blog', ['posts'=>$posts]);
+         $posts = Post::all();
+         $users = User::all();
+        $posts = Post::withCount('comments')->first();
+      return view('pages.blog.index', ['posts'=>$posts, 'users' =>$users, 'comments'=>$comments]);
   }
 }

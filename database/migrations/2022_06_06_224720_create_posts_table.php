@@ -17,15 +17,11 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('cover_image');
             $table->string('title');
-            $table->string('slug'); 
             $table->text('body');
-            $table->text('meata_description')->nullable();
             $table->dateTime('published_time')->nullable();
             $table->timestamp('published_at')->nullable();
-            $table->boolean('featured')->default(0);
             $table->foreignId('categorie_id');
             $table->foreignId('user_id');
-
             $table->timestamps();
             
 
