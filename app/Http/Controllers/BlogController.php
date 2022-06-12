@@ -18,7 +18,7 @@ class BlogController extends Controller
   {
          $posts = Post::all();
          $users = User::all();
-        $posts = Post::withCount('comments')->first();
-      return view('pages.blog.index', ['posts'=>$posts, 'users' =>$users, 'comments'=>$comments]);
+        $posts = Post::withCount('comments')->get();
+      return view('pages.blog.index', ['posts'=>$posts, 'users' =>$users]);
   }
 }

@@ -78,16 +78,17 @@
                                     <a href="#" class="text-blue-500 hover:underline">Read more
                                     </a>
                                     <div class="flex">
-                                        <a href="#" class=""><img src="{{asset('images/TEPEU.jpg')}}" alt="avatar"
+                                        <a href="#" class=""><img src="{{$post->user->profile_photo_path}}" alt="avatar"
                                                 class="hidden object-cover w-10 h-10  rounded-full sm:block">
 
                                             <h2 class="font-semibold text-gray-700  ">
-                                                {{$comments}}
+
+                                                {{$post->comments_count}}
+
+
                                             </h2>
 
-                                            {{-- @foreach ($post->comments as $comment)
-                                            <p>{{ $counters }}</p>
-                                            @endforeach --}}
+
 
 
 
